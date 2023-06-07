@@ -12,5 +12,10 @@ namespace MultipleStuff
         {
             this.controller = controller;
         }
+
+        public void ShowResult(int version, double min, double max)
+        {
+            Console.WriteLine($"GetMinMax{version}: Min = {min}, Max = {max}");
+        }
     }
 }

@@ -7,6 +7,6 @@ namespace MultipleStuff
 {
     public interface IView
     {
-        
+        void ShowResult(int version, double min, double max);
     }
 }
