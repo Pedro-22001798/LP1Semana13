@@ -15,7 +15,14 @@ namespace Palindrome
 
         public void ShowStringResult(string s, bool result)
         {
-            Console.WriteLine($"{s} -> {result}");
+            if(result == true)
+            {
+                Console.WriteLine($"{s} -> true");
+            }
+            else
+            {
+                Console.WriteLine($"{s} -> false");
+            }
         }
     }
 }
