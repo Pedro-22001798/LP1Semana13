@@ -40,7 +40,7 @@ namespace Palindrome
             {
                 throw new ArgumentNullException();
             }
-            else if(testString.Length > 2)
+            else if(testString.Length < 2)
             {
                 return true;
             }
@@ -51,21 +51,7 @@ namespace Palindrome
 
             bool CheckPalindrome(string testString)
             {
-                testString = testString.Replace(" ", "").ToLower();
-
-                int leftString = 0;
-                int rightString = testString.Length - 1;
-
-                while (leftString < rightString)
-                {
-                    if (testString[leftString] != testString[rightString])
-                        return false;
-
-                    leftString++;
-                    rightString--;
-                }
-
-                return true;
+                return testString.SequenceEqual(testString.Reverse());
             }
         }
     }
